@@ -10,3 +10,5 @@ If you don't know what this is, then you just breezed through the Python install
 Tkinter comes pre-installed to Python, so you're good with that, but Paho-MQTT requires you to run 'pip install paho-mqtt' in Command Prompt.
 
 ### How to configure ###
+
+In the code, you will find 4 variables that you can change accordingly to the topic you want to send "ON" and "OFF" to.
