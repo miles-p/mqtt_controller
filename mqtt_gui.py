@@ -1,3 +1,12 @@
+### YOU NEED TO CONFIGURE THIS STUFF ###
+
+button_1_path = "The topic to publish Button 1's commands to"
+button_2_path = "The topic to publish Button 2's commands to"
+button_3_path = "The topic to publish Button 3's commands to"
+button_4_path = "The topic to publish Button 4's commands to"
+
+
+
 ### SPECIAL SHIT ###
 import paho.mqtt.client as mqtt
 from tkinter import *
@@ -10,28 +19,28 @@ host = StringVar()
 
 ### FUNCTIONS ###
 def ON1():
-    client.publish("study/relay0","ON")
+    client.publish(button_1_path,"ON")
     print("SENT ON")
 def OFF1():
-    client.publish("study/relay0","OFF")
+    client.publish(button_1_path,"OFF")
     print("SENT OFF")
 def ON2():
-    client.publish("study/relay1","ON")
+    client.publish(button_2_path,"ON")
     print("SENT ON")
 def OFF2():
-    client.publish("study/relay1","OFF")
+    client.publish(button_2_path,"OFF")
     print("SENT OFF")
 def ON3():
-    client.publish("study/relay2","ON")
+    client.publish(button_3_path,"ON")
     print("SENT ON")
 def OFF3():
-    client.publish("study/relay2","OFF")
+    client.publish(button_3_path,"OFF")
     print("SENT OFF")
 def ON4():
-    client.publish("study/relay3","ON")
+    client.publish(button_4_path,"ON")
     print("SENT ON")
 def OFF4():
-    client.publish("study/relay3","OFF")
+    client.publish(button_4_path,"OFF")
     print("SENT OFF")
 def RECONNECT():
     client.connect(host.get())
